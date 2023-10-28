@@ -108,8 +108,8 @@ const LeadListEmp = () => {
   return (
     <>
     <NavSideEmp/>
-      <div className='pl-72 mt-20 m-10'>
-        <h2 className="text-2xl font-bold mb-4 text-indigo-500">Lead List</h2>
+      <div className='m-5 pl-5 md:pl-72 mt-20 '>
+        <h2 className="md:text-2xl text:xl font-bold mb-4 text-indigo-500">Lead List</h2>
         <div className="overflow-x-auto">
           <table className="min-w-full bg-white rounded-lg shadow-md">
             <thead className='bg-violet-300'>
@@ -176,8 +176,8 @@ const LeadListEmp = () => {
 
         {isViewModalOpen && (
           <div className="fixed inset-0 flex items-center justify-center z-50" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-            <div className="modal-container bg-white w-96 p-6 rounded shadow-lg">
-              <div className="p-1 text-center">
+            <div className="modal-container bg-white sm:p-4 sm:w-96 rounded shadow-lg">
+              <div className="p-2 text-center">
                 <h3 className="mb-5 text-lg font-semibold text-gray-800 dark:text-gray-400">Lead Details</h3>
                 {viewLead && (
                   <div>
@@ -213,14 +213,15 @@ const LeadListEmp = () => {
         )}
 
         {isEditModalOpen && (
-          <div className="fixed inset-0 flex items-center justify-center z-50" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-            <div className="modal-container bg-white w-96 p-6 rounded shadow-lg">
-              <div className="p-1 text-center">
+          <div className="fixed inset-0 flex items-center justify-center z-50"
+              style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+            <div className="modal-container bg-white sm:p-4 sm:w-96 rounded shadow-lg">
+              <div className="p-6 text-center">
                 <h3 className="mb-5 text-lg font-semibold text-gray-800 dark:text-gray-400">Edit Lead</h3>
                 {editedLead && (
                   <div>
-                    <div className="mb-2">
-                      <label htmlFor="customerName" className="text-left justify-center block mb-2">
+                    <div className="mb-1">
+                      <label htmlFor="customerName" className="text-left justify-center block mb-1">
                         Customer Name
                       </label>
                       <input
@@ -231,8 +232,8 @@ const LeadListEmp = () => {
                         className="border border-gray-200 p-2 w-full rounded"
                       />
                     </div>
-                    <div className="mb-2">
-                      <label htmlFor="companyName" className="text-left justify-center block mb-2">
+                    <div className="mb-1">
+                      <label htmlFor="companyName" className="text-left justify-center text-sm block mb-1">
                         Company Name
                       </label>
                       <input
@@ -243,8 +244,8 @@ const LeadListEmp = () => {
                         className="border border-gray-200 p-2 w-full rounded"
                       />
                     </div>
-                    <div className="mb-2">
-                      <label htmlFor="contactNo" className="text-left justify-center block mb-2">
+                    <div className="mb-1">
+                      <label htmlFor="contactNo" className="text-left justify-center block mb-1">
                         Contact No
                       </label>
                       <input
@@ -255,8 +256,8 @@ const LeadListEmp = () => {
                         className="border border-gray-200 p-2 w-full rounded"
                       />
                     </div>
-                    <div className="mb-2">
-                      <label htmlFor="email" className="text-left justify-center block mb-2">
+                    <div className="mb-1">
+                      <label htmlFor="email" className="text-left justify-center block mb-1">
                         Email
                       </label>
                       <input
@@ -268,7 +269,7 @@ const LeadListEmp = () => {
                       />
                     </div>
                     <div className="mb-2">
-                      <label htmlFor="description" className="text-left justify-center block mb-2">
+                      <label htmlFor="description" className="text-left justify-center block mb-1">
                         Description
                       </label>
                       <textarea
@@ -303,22 +304,26 @@ const LeadListEmp = () => {
 
         {isDeleteModalOpen && (
           <div className="fixed inset-0 flex items-center justify-center z-50" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-            <div className="modal-container bg-white w-96 p-6 rounded shadow-lg">
-              <h3 className="mb-5 text-lg font-semibold text-red-800 dark:text-gray-400 text-center">Confirm Deletion ?</h3>
-              <p className="mb-3 text-center">Are you sure you want to delete this lead?</p>
+            <div className="modal-container bg-white sm:p-4 sm:w-96 rounded shadow-lg">
+              <div className="p-5 text-center"> 
+              <svg className="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+              <p className="mb-3 text-center font-medium">Delete this lead?</p>
               <div className="mt-4">
                 <button
                   onClick={handleConfirmDelete}
-                  className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mr-10 ml-12"
+                  className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 mr-4 rounded "
                 >
                   Confirm
                 </button>
                 <button
                   onClick={() => setIsDeleteModalOpen(false)}
-                  className="bg-gray-400 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded ml-4"
+                  className="bg-gray-400 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
                 >
                   Cancel
                 </button>
+              </div>
               </div>
             </div>
           </div>
