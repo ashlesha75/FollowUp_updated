@@ -141,9 +141,10 @@ const CompletedTaskList = () => {
       {/* View Task Modal */}
       {viewTask && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-opacity-50 bg-gray-700">
-          <div className="modal-container bg-white sm:p-4 sm:w-96 rounded-md">
-            <h2 className="text-2xl font-semibold mb-4">Task Details</h2>
-            <div className='p-1 text-center'>
+          <div className="modal-container bg-white w-72 md:w-96 sm:p-6 rounded-md">
+            
+            <div className='p-2 text-center text-sm md:text-base'>
+            <h3 className="text-xl font-semibold mb-2">Task Details</h3>
               <p className="mb-2 text-left justify-center">
                 <strong>AssignTo:</strong> {viewTask.assignTo}
               </p>
@@ -183,15 +184,16 @@ const CompletedTaskList = () => {
                 )}
               </p>
 
-              <p className="mb-2 text-left justify-center">
-                <strong>Audio:</strong>{" "}
+              <p className="mb-2 text-left flex items-center">
+                {/* <strong>Audio:</strong>{" "}
+                {viewTask.audio ? ( */}
+                  <span className="mr-1"><strong>Audio:</strong></span>{" "}
                 {viewTask.audio ? (
-                  <>
                     <audio controls>
                       <source src={`http://localhost:5000/${viewTask.audio}`} type="audio/mp3" />
                       Your browser does not support the audio element.
                     </audio>
-                  </>
+                  
                 ) : (
                   "Not Added"
                 )}
@@ -210,9 +212,9 @@ const CompletedTaskList = () => {
 
       {isPreviewModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-          <div className="modal-container bg-white sm:p-4 sm:w-96 rounded shadow-lg" onClick={(e) => e.stopPropagation()}>
+          <div className="modal-container bg-white w-64 p-6 rounded shadow-lg" onClick={(e) => e.stopPropagation()}>
             <button type="button" className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" onClick={() => setIsPreviewModalOpen(false)}></button>
-            <div className="p-1 text-center">
+            <div className="p-5 text-center">
               <h3 className="mb-5 text-lg font-semibold text-gray-800 dark:text-gray-400">Image Preview</h3>
               <Image
                 src={completeImageUrl}

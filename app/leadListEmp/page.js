@@ -176,28 +176,28 @@ const LeadListEmp = () => {
 
         {isViewModalOpen && (
           <div className="fixed inset-0 flex items-center justify-center z-50" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-            <div className="modal-container bg-white sm:p-4 sm:w-96 rounded shadow-lg">
-              <div className="p-2 text-center">
+            <div className="modal-container bg-white w-72 md:w-96 sm:p-6 rounded shadow-lg">
+              <div className="p-2 text-center text-sm md:text-base">
                 <h3 className="mb-5 text-lg font-semibold text-gray-800 dark:text-gray-400">Lead Details</h3>
                 {viewLead && (
                   <div>
                     <p className="mb-2 text-left justify-center">
-                      <strong className='pl-2'>Created By:</strong> {viewLead.assignedByName}
+                      <strong >Created By:</strong> {viewLead.assignedByName}
                     </p>
                     <p className="mb-2 text-left justify-center">
-                      <strong className='pl-2'>Customer Name:</strong> {viewLead.customerName}
+                      <strong >Customer Name:</strong> {viewLead.customerName}
                     </p>
                     <p className="mb-2 text-left justify-center">
-                      <strong className='pl-2'  >Company Name:</strong> {viewLead.companyName}
+                      <strong   >Company Name:</strong> {viewLead.companyName}
                     </p>
                     <p className="mb-2 text-left justify-center">
-                      <strong className='pl-2'>Contact No:</strong> {viewLead.contactNo}
+                      <strong >Contact No:</strong> {viewLead.contactNo}
                     </p>
                     <p className="mb-2 text-left justify-center">
-                      <strong className='pl-2'>Email:</strong> {viewLead.email}
+                      <strong >Email:</strong> {viewLead.email}
                     </p>
                     <p className="mb-2 text-left justify-center">
-                      <strong className='pl-2'>Description:</strong> {viewLead.description}
+                      <strong >Description:</strong> {viewLead.description}
                     </p>
                   </div>
                 )}
@@ -216,7 +216,7 @@ const LeadListEmp = () => {
           <div className="fixed inset-0 flex items-center justify-center z-50"
               style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
             <div className="modal-container bg-white sm:p-4 sm:w-96 rounded shadow-lg">
-              <div className="p-6 text-center">
+              <div className="p-6 text-center ">
                 <h3 className="mb-5 text-lg font-semibold text-gray-800 dark:text-gray-400">Edit Lead</h3>
                 {editedLead && (
                   <div>
@@ -245,7 +245,7 @@ const LeadListEmp = () => {
                       />
                     </div>
                     <div className="mb-1">
-                      <label htmlFor="contactNo" className="text-left justify-center block mb-1">
+                      <label htmlFor="contactNo" className="text-left justify-center text-sm block mb-1">
                         Contact No
                       </label>
                       <input

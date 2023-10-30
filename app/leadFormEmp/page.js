@@ -89,19 +89,20 @@ const LeadFormEmp = () => {
             {/* <Sidebar /> */}
             {/* <EmployeeSidebar/> */}
             <NavSideEmp/>
-            <div className="container mx-auto flex justify-center items-center mt-28 mb-15 pl-64">
-                <div className="w-1/2 ">
+            <div className="w-full md:flex justify-center items-center min-h-screen md:mt-10 md:pl-28 bg-slate-50">
+                {/* <div className="w-1/2"> */}
+                <div className="w-full md:max-w-xl overflow-x-auto border border-gray-200 rounded-lg p-5 bg-white mt-16">
                     <div className="bg-white shadow-md rounded px-8 py-8 mb-4 border border-gray-800">
                         <h1 className="text-2xl font-bold mb-4 text-orange-500">Create Lead</h1>
                         <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
                             <div className="mb-2">
-                                <label className="block text-gray-700 text-sm font-bold mb-1" htmlFor="customerName">
+                            <label className="block text-gray-700 text-sm font-semibold mb-1" htmlFor="customerName">
                                     Customer Name
                                 </label>
                                 <input
                                     type="text"
                                     id="customerName"
-                                    name="customerName"
+                                    name="Enter Customer Name"
                                     value={formData.customerName}
                                     onChange={handleInputChange}
                                     placeholder='name'
@@ -109,20 +110,20 @@ const LeadFormEmp = () => {
                                 />
                             </div>
                             <div className="mb-2 pl-3">
-                                <label className="block text-gray-700 text-sm font-bold mb-1" htmlFor="companyName">
+                                <label className="block text-gray-700 text-sm font-semibold mb-1" htmlFor="companyName">
                                     Company Name
                                 </label>
                                 <input
                                     type="text"
                                     id="companyName"
-                                    name="companyName"
+                                    name="Enter Company Name"
                                     value={formData.companyName}
                                     onChange={handleInputChange}
                                     placeholder='Company name'
                                     className="border rounded-md px-3 py-1 w-full" />
                             </div>
                             <div className="mb-2">
-                                <label className="block text-gray-700 text-sm font-bold mb-1" htmlFor="contactNo">
+                                <label className="block text-gray-700 text-sm font-semibold mb-1" htmlFor="contactNo">
                                     Mobile No
                                 </label>
                                 <input
@@ -131,11 +132,11 @@ const LeadFormEmp = () => {
                                     name="contactNo"
                                     value={formData.contactNo}
                                     onChange={handleInputChange}
-                                    placeholder='+123-456-7890'
+                                    placeholder='+91 123-456-7890'
                                     className="border rounded-md px-3 py-1 w-full" />
                             </div>
                             <div className="mb-2 pl-3">
-                                <label className="block text-gray-700 text-sm font-bold mb-1" htmlFor="email">
+                                <label className="block text-gray-700 text-sm font-semibold mb-1" htmlFor="email">
                                     Email
                                 </label>
                                 <input
@@ -144,11 +145,11 @@ const LeadFormEmp = () => {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleInputChange}
-                                    placeholder='****@gmail.com'
+                                    placeholder='Enter email id'
                                     className="border rounded-md px-3 py-1 w-full" />
                             </div>
                             <div className="mb-2">
-                                <label className="block text-gray-700 text-sm font-bold mb-1" htmlFor="description">
+                                <label className="block text-gray-700 text-sm font-semibold mb-1" htmlFor="description">
                                     Lead Description
                                 </label>
                                 <input
@@ -159,7 +160,7 @@ const LeadFormEmp = () => {
                                     className="border rounded-md px-3 py-1 w-full" />
                             </div>
                             <div className="mb-2 pl-3">
-                                <label className="block text-gray-700 text-sm font-bold mb-1" htmlFor="ownerName">
+                                <label className="block text-gray-700 text-sm font-semibold mb-1" htmlFor="ownerName">
                                     Company Owner&apos;s Name
                                 </label>
                                 <input
@@ -171,7 +172,7 @@ const LeadFormEmp = () => {
                                     className="border rounded-md px-3 py-1 w-full" />
                             </div>
                             <div className="mb-2">
-                                <label className="block text-gray-700 text-sm font-bold mb-1" htmlFor="website">
+                                <label className="block text-gray-700 text-sm font-semibold mb-1" htmlFor="website">
                                     Website
                                 </label>
                                 <input
@@ -184,7 +185,7 @@ const LeadFormEmp = () => {
                                     className="border rounded-md px-3 py-1 w-full" />
                             </div>
                             <div className="mb-4 pl-3">
-                                <label className="block text-gray-700 text-sm font-bold mb-1" htmlFor="leadPicture">
+                                <label className="block text-gray-700 text-sm font-semibold mb-1" htmlFor="leadPicture">
                                     Lead Picture
                                 </label>
                                 <input
@@ -207,7 +208,7 @@ const LeadFormEmp = () => {
                             </div>
                         </form>
                     </div>
-                </div>
+                  </div> 
             </div>
         </>
     );
